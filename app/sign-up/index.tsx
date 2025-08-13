@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { View, Text, TextInput, Pressable, TouchableOpacity } from "react-native";
 import { useRouter } from "expo-router";
-import { ChevronLeft, Eye, EyeOff } from "lucide-react-native";
+import { Check, ChevronLeft, Eye, EyeOff } from "lucide-react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { LinearGradient } from "expo-linear-gradient";
 
@@ -15,6 +15,7 @@ export default function SignUpScreen() {
       const [email, setEmail] = useState("");
       const [password, setPassword] = useState("");
       const [confirmPassword, setConfirmPassword] = useState("");
+      const [isChecked, setIsChecked] = useState(false);
 
   return (
     <SafeAreaView>
@@ -123,7 +124,7 @@ export default function SignUpScreen() {
               style={{
                     width: "100%",
                     height: 48,
-                    borderRadius: 8, // this is "rounded-full"
+                    borderRadius: 8,
                     justifyContent: "center",
                     alignItems: "center",
                     overflow: "hidden"
@@ -136,22 +137,29 @@ export default function SignUpScreen() {
           <Text className="text-[#888] text-md text-center">
             I&apos;m already a member.{" "}
             <Text
-             className="text-[#C43670] underline"
-             onPress={() => router.push("/sign-in")}
-             >
-             Sign In
+              className="text-[#C43670] underline"
+              onPress={() => router.push("/sign-in")}
+              >
+              Sign In
             </Text>
-           </Text>
+          </Text>
         </View>
 
         {/* Footer */}
-        <View className="items-center mt-8 mb-4">
+        <View className="flex-row items-start justify-center">
 
-        </View>
+            <Pressable
+            onPress={() => setIsChecked(!isChecked)}
+            className={`w-5 h-5 border-2 rounded-md items-center justify-center mt-2 mr-2 ${
+              isChecked ? "bg-pink-500 border-pink-500" : "border-gray-400"
+            }`}
+              >
+              {isChecked && <Check size={14} color="#fff" />}
+            </Pressable>
 
-        <View className="items-center mb-10">
-          <Text className="text-[10px] text-gray-500 text-center">
-            By continuing, you agree to DermAI&apos;s{" "}
+          {/* Disclaimer text */}
+          <Text className="text-sm text-gray-500 mb-10">
+            By using DermAI, you agree to our {"\n"}
             <Text className="text-pink-500 underline">Terms of Service</Text> and{" "}
             <Text className="text-pink-500 underline">Privacy Policy</Text>
           </Text>

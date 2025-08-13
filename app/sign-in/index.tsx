@@ -73,7 +73,7 @@ export default function SignInPage() {
                           style={{
                                 width: "100%",
                                 height: 48,
-                                borderRadius: 8, // this is "rounded-full"
+                                borderRadius: 8,
                                 justifyContent: "center",
                                 alignItems: "center",
                                 overflow: "hidden"
