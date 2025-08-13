@@ -96,7 +96,6 @@ export default function SignInPage() {
 
                 {/* Footer */}
                 <View className="items-center mt-8 mb-10">
-
                     <Text className="text-gray-500 text-md">DermAI 2025</Text>
                 </View>
             </View>
