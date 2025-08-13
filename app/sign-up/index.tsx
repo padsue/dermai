@@ -160,8 +160,8 @@ export default function SignUpScreen() {
           {/* Disclaimer text */}
           <Text className="text-sm text-gray-500 mb-10">
             By using DermAI, you agree to our {"\n"}
-            <Text className="text-pink-500 underline">Terms of Service</Text> and{" "}
-            <Text className="text-pink-500 underline">Privacy Policy</Text>
+            <Text className="text-[#C43670] underline">Terms of Service</Text> and{" "}
+            <Text className="text-[#C43670] underline">Privacy Policy</Text>
           </Text>
         </View>
       </View>
