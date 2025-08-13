@@ -10,9 +10,9 @@ export default function ForgotPassword() {
   const [email, setEmail] = useState("");
 
   return (
-    <SafeAreaView className="flex-1 px-6">
+    <SafeAreaView className="flex-1 p-6">
       {/* Back Button */}
-      <View className="flex-row items-center mb-8">
+      <View className="flex-row items-center mb-8 ">
         <TouchableOpacity onPress={() => router.back()} className="mb-8">
           <ChevronLeft size={50} color="#555" />
         </TouchableOpacity>
