@@ -59,13 +59,13 @@ export default function SignInPage() {
                         {showPassword ? <EyeOff size={20} color="#999" /> : <Eye size={20} color="#999" />}
                         </Pressable>
                     </View>
-                    <TouchableOpacity onPress={() => router.push("/forgot-password")} className="self-end">
+                    <TouchableOpacity onPress={() => router.push("/auth/forgot-password")} className="self-end">
                         <Text className="mt-2 text-[#C43670] text-md underline">Forgot Password?</Text>
                     </TouchableOpacity>
                     </View>
 
                     {/* Sign In Button */}
-                    <Pressable onPress={() => router.push("/dashboard")} className="mt-4">
+                    <Pressable onPress={() => router.push("/dashboard/home")} className="mt-4">
                         <LinearGradient
                         colors={["#f3cc97", "#C43670"]}
                         start={{ x: 1, y: 0 }}
@@ -87,7 +87,7 @@ export default function SignInPage() {
                     I&apos;m a new user.{" "}
                     <Text
                         className="text-[#C43670] underline"
-                        onPress={() => router.push("/sign-up")}
+                        onPress={() => router.push("/auth/sign-up")}
                     >
                         Sign Up
                     </Text>

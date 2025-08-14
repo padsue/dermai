@@ -25,15 +25,14 @@ export default function LandingPage() {
                 </View>
             </View>
 
-            <View className="w-full max-w-sm mb-20">
-
-                <Pressable onPress={() => router.push("/sign-up")}
+            <View className="w-full max-w-sm mb-40">
+                <Pressable onPress={() => router.push("/auth/sign-up")}
                  className= "w-full h-12 flex items-center bg-[#C43670] justify-center shadow-lg shadow-black mb-4 rounded-lg">
                     <Text className="text-white font-semibold">Let's get started</Text>
                 </Pressable>
 
                 <Pressable
-                onPress={() => router.push("/sign-in")}
+                onPress={() => router.push("/auth/sign-in")}
                 className="w-full h-12 bg-white flex items-center justify-center shadow-lg shadow-black mb-10 rounded-lg"
                 >
                 <Text className="text-[#C43670] font-semibold">

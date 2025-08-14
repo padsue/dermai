@@ -116,7 +116,7 @@ export default function SignUpScreen() {
           </View>
 
           {/* Sign Up Button */}
-          <Pressable onPress={() => router.push("/dashboard")} className="mt-10 mb-2">
+          <Pressable onPress={() => router.push("../dashboard/home")} className="mt-10 mb-2">
             <LinearGradient
               colors={["#f3cc97", "#C43670"]}
               start={{ x: 1, y: 0 }}
@@ -138,7 +138,7 @@ export default function SignUpScreen() {
             I&apos;m already a member.{" "}
             <Text
               className="text-[#C43670] underline"
-              onPress={() => router.push("/sign-in")}
+              onPress={() => router.push("/auth/sign-in")}
               >
               Sign In
             </Text>
