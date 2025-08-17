@@ -23,11 +23,11 @@ export default function Header() {
 
             className="flex-row items-center"
             >
-            <Text className="text-2xl font-bold text-[#C43670]"
+            <Text className="text-2xl font-extrabold text-[#C43670]"
             >
                Derm
             </Text>
-            <Text className="text-2xl font-bold text-[#f2838f]">AI</Text>
+            <Text className="text-2xl font-extrabold text-[#f2838f]">AI</Text>
             </Pressable>
         </View>
 

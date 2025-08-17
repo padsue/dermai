@@ -17,7 +17,7 @@ export default function LandingPage() {
                 resizeMode="contain"
                 />
                 <View className="items-center">
-                <Text className="text-4xl font-bold">
+                <Text className="text-4xl font-extrabold">
                     <Text className="text-[#C43670]">Derm</Text>
                     <Text className="text-[#f2838f]">AI</Text>
                 </Text>

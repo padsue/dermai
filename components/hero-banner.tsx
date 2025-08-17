@@ -1,15 +1,45 @@
 import React from "react";
-import { View, Text } from "react-native";
+import {
+  View,
+  Text,
+  Image,
+  ImageBackground,
+  TouchableOpacity,
+} from "react-native";
 
 export default function HeroBanner() {
-    return (
-        <View className="bg-gradient-to-r from-[#C43670] to-[#f3cc97] p-6 rounded-2xl shadow">
-        <Text className="text-white text-lg font-semibold">
-            Welcome to DermAI
-        </Text>
-        <Text className="text-white text-sm mt-1">
-            Your skin health partner, anytime, anywhere.
-        </Text>
+  return (
+    <View className="relative w-full h-32 rounded-xl overflow-hidden shadow-md mt-4">
+      <ImageBackground
+        source={require("../assets/abstractbg.jpg")} // update path
+        resizeMode="cover"
+        className="flex-1"
+      >
+        <View className="absolute inset-0 flex-row items-center justify-between p-4">
+          {/* Left content */}
+          <View className="flex-col space-y-0 max-w-[60%]">
+            <Text className="text-[10px] font-light leading-none text-black">
+              Access Online Consultations
+            </Text>
+            <Text className="text-[10px] font-bold leading-none text-black">
+              from Licensed Dermatologists
+            </Text>
+
+            {/* Button replacement */}
+            <TouchableOpacity className="w-fit mt-4 px-6 py-2 rounded-full bg-[#fbd9e5] shadow-md shadow-gray-500">
+              <Text className="text-[8px] font-semibold text-black">
+                Schedule Appointment
+              </Text>
+            </TouchableOpacity>
+          </View>
+
+          {/* Right image */}
+          <Image
+            source={require("../assets/human.png")} // update path
+            style={{ width: 100, height: 100, resizeMode: "contain" }}
+          />
         </View>
-    );
-    }
+      </ImageBackground>
+    </View>
+  );
+}
