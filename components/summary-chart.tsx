@@ -30,7 +30,7 @@ export default function SummaryCard() {
   ];
 
   return (
-    <View className="bg-[#FFF8F0] p-6 rounded-xl -mt-4 shadow-lg shadow-black">
+    <View className="bg-[#FFF8F0] p-4 rounded-xl -mt-2 shadow-lg shadow-black">
       <View className="flex-row items-center">
         {/* Pie Chart */}
         <PieChart

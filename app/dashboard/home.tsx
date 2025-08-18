@@ -113,7 +113,7 @@ export default function DashboardPage() {
 
         <Text className="mt-6 text-2xl font-bold text-[#C43670]">Good morning, {userName}!</Text>
 
-        <Text className="text-dark-gray mb-4 mt-6 text-lg font-semibold">
+        <Text className="text-dark-gray mt-6 text-lg font-semibold">
           Membership & Health Plan
         </Text>
         <MembershipCard />
@@ -124,9 +124,9 @@ export default function DashboardPage() {
         <Text className="text-dark-gray mb-4 mt-6 text-lg font-semibold">Booked Consultation</Text>
 
         <ScrollView horizontal showsHorizontalScrollIndicator={false} className="pb-4">
-          <ConsultationCard title="General Practitioners" price="P 550" />
-          <ConsultationCard title="Specialists" price="P 699" />
-          <ConsultationCard title="Dermatologists" price="P 999" />
+          <ConsultationCard title="Cosmetic" price="P 550" />
+          <ConsultationCard title="Pediatric" price="P 699" />
+          <ConsultationCard title="Medical" price="P 999" />
           {/* Add more cards as needed */}
         </ScrollView>
       </ScrollView>
