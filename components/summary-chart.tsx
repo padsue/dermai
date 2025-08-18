@@ -8,7 +8,7 @@ export default function SummaryCard() {
   const data = [
     {
       name: "Photos uploaded",
-      population: 5,
+      population: 7,
       color: "#C43670",
       legendFontColor: "#7F7F7F",
       legendFontSize: 12,
@@ -22,7 +22,7 @@ export default function SummaryCard() {
     },
     {
       name: "Appointments done",
-      population: 5,
+      population: 3,
       color: "#F3CC97",
       legendFontColor: "#7F7F7F",
       legendFontSize: 12,

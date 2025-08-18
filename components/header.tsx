@@ -11,39 +11,32 @@ export default function Header() {
     return (
         <View className="flex-row items-center justify-between p-4 bg-white border-b border-gray-100">
         {/* Left Section */}
-        <View className="flex-row items-center space-x-4">
+        <View className="flex-row items-center">
             <Pressable
             onPress={() => router.push("auth/sign-in")}
             accessibilityLabel="Menu"
             >
-            <Menu size={24} color="#4B5563" />
+            <Menu size={28} color="#4B5563" />
             </Pressable>
 
             <Pressable
 
-            className="flex-row items-center"
+            className="flex-row items-center ml-2"
             >
-            <Text className="text-2xl font-extrabold text-[#C43670]"
+            <Text className="text-3xl font-extrabold text-[#C43670]"
             >
                Derm
             </Text>
-            <Text className="text-2xl font-extrabold text-[#f2838f]">AI</Text>
+            <Text className="text-3xl font-extrabold text-[#f2838f]">AI</Text>
             </Pressable>
         </View>
 
         {/* Right Section */}
-        <View className="flex-row items-center space-x-4">
+        <View className="flex-row items-center mr-2">
             <Pressable
-
             accessibilityLabel="Search"
             >
-            <Search size={24} color="#4B5563" />
-            </Pressable>
-            <Pressable
-
-            accessibilityLabel="User Profile"
-            >
-            <User size={24} color="#4B5563" />
+            <Search size={28} color="#4B5563" />
             </Pressable>
         </View>
         </View>

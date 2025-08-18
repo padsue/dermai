@@ -40,7 +40,7 @@ export default function DashboardPage() {
         className="p-4">
         <HeroBanner />
 
-        <Text className="mt-6 text-xl font-bold text-[#C43670]">Good morning, {userName}!</Text>
+        <Text className="mt-6 text-2xl font-bold text-[#C43670]">Good morning, {userName}!</Text>
 
         <Text className="text-dark-gray mb-4 mt-6 text-lg font-semibold">
           Membership & Health Plan

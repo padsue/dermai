@@ -26,7 +26,7 @@ export default function HeroBanner() {
             </Text>
 
             {/* Button replacement */}
-            <TouchableOpacity className="w-fit mt-4 px-6 py-2 rounded-full bg-[#fbd9e5] shadow-md shadow-gray-500">
+            <TouchableOpacity className="w-fit mt-4 px-6 py-2 rounded-full bg-[#fbd9e5] shadow-lg shadow-black">
               <Text className="text-[8px] font-semibold text-black">
                 Schedule Appointment
               </Text>
