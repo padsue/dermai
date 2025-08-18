@@ -65,10 +65,13 @@ export default function DashboardPage() {
   return (
     <SafeAreaView className="flex-1 bg-gray-50">
       {/* Custom Header with Profile Menu */}
-      <View className="flex-row items-center justify-between bg-white px-4 py-3">
-        <Text className="text-xl font-bold text-[#C43670]">DermAI</Text>
+      <View className="flex-row items-center justify-between bg-white px-4 py-3 -mb-4">
+        <Text className="text-3xl font-extrabold ml-2">
+          <Text className="text-[#C43670]">Derm</Text>
+          <Text className="text-[#f2838f]">AI</Text>
+        </Text>
         <TouchableOpacity onPress={() => setShowProfileMenu(true)} className="p-2">
-          <User size={24} color="#C43670" />
+          <User size={28} color="#C43670" />
         </TouchableOpacity>
       </View>
 

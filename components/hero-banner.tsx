@@ -9,9 +9,9 @@ import {
 
 export default function HeroBanner() {
   return (
-    <View className="relative w-full h-32 rounded-xl overflow-hidden shadow-md mt-4">
+    <View className="relative w-full h-32 rounded-xl overflow-hidden shadow-lg shadow-black mt-2">
       <ImageBackground
-        source={require("../assets/abstractbg.jpg")} // update path
+        source={require("../assets/abstractbg.jpg")}
         resizeMode="cover"
         className="flex-1"
       >
