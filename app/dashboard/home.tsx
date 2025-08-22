@@ -4,12 +4,12 @@ import HeroBanner from 'components/hero-banner';
 import MembershipCard from 'components/membership-card';
 import SummaryChart from 'components/summary-chart';
 import ConsultationCard from 'components/consultation-card';
-import BottomNavigation from 'components/bottom-navigation';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { AuthService, logOut } from '../../src/api/services/authService';
 import { UserService } from '../../src/api/services';
 import { useRouter } from 'expo-router';
 import { User, LogOut } from 'lucide-react-native';
+import { Octicons, } from '@expo/vector-icons';
 
 export default function DashboardPage() {
   const [userName, setUserName] = useState('User');
@@ -131,20 +131,34 @@ export default function DashboardPage() {
       </ScrollView>
 
       {/* Fixed bottom navigation */}
-      <View className="bg-[#F283AF] p-4 shadow absolute bottom-0 left-0 right-0 flex-row justify-around">
-      <Pressable onPress={() => router.push("/dashboard/home")}>
-        <Text className="text-[#FBD9E5] font-semibold">Home</Text>
+      <View className="bg-[#C43670] absolute bottom-0 left-0 right-0 flex-row justify-around ">
+      <Pressable onPress={() => router.push("/dashboard/home")} className="items-center mt-4">
+        <Octicons name="home" size={24} color="white" className="" />
+        <Text className="text-white ">Home</Text>
       </Pressable>
-      <Pressable onPress={() => router.push("/dashboard/consultation")}>
+      <Pressable onPress={() => router.push("/dashboard/consultation")} className="items-center mt-4 ">
+        <Octicons name="file" size={24} color="white" className="" />
         <Text className="text-white">Consult</Text>
       </Pressable>
-      <Pressable>
-        <Text className="text-white">Scan</Text>
+      <Pressable onPress={() => router.push("/dashboard/scan")}
+        style={{
+        width: 64,
+        height: 64,
+        borderWidth: 7,
+        borderColor: "white",
+        borderRadius: 32,
+        justifyContent: "center",
+        alignItems: "center",
+      }}>
+        <Octicons name="screen-full" size={32} color="white" />
+
       </Pressable>
-      <Pressable>
+      <Pressable onPress={() => router.push("/dashboard/notification")} className="items-center mt-4">
+        <Octicons name="bell" size={24} color="white" />
         <Text className="text-white">History</Text>
       </Pressable>
-      <Pressable>
+      <Pressable onPress={() => router.push("/dashboard/profile")} className="items-center mt-4">
+        <Octicons name="person" size={24} color="white" />
         <Text className="text-white">Profile</Text>
       </Pressable>
       </View>
