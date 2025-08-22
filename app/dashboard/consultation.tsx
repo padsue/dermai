@@ -131,11 +131,14 @@ export default function ConsultationsScreen() {
         columnWrapperStyle={{ justifyContent: "space-between", paddingHorizontal: 12 }}
         contentContainerStyle={{ paddingVertical: 12 }}
         renderItem={({ item }) => (
-          <View className="bg-white rounded-xl shadow-lg p-3 mb-4 w-[48%]">
+          <View className="bg-white rounded-xl shadow-lg shadow-black p-3 mb-4 w-[48%]">
             <Image
-              source={ {image: require("assets/logo.png")}}
-              className="w-16 h-16 rounded-full self-center"
+              source={require("../../assets/logo.png")}
+              className="w-16 h-16 rounded-full "
             />
+            <Text className="absolute top-4 right-4 text-[10px] bg-pink-200 text-pink-600 px-2 py-0.5 rounded-full">
+                Available
+            </Text>
             <View className="mt-2">
               <Text className="text-sm font-poppinsBold">{item.name}</Text>
               <Text className="text-xs text-gray-500">{item.specialty}</Text>
@@ -153,30 +156,28 @@ export default function ConsultationsScreen() {
                   />
                 ))}
               </View>
-              <Text className="absolute top-2 right-2 text-[10px] bg-pink-200 text-pink-600 px-2 py-0.5 rounded-full font-poppins">
-                Available
-              </Text>
+
             </View>
           </View>
         )}
       />
 
       {/* Bottom Nav */}
-        <View className="bg-pink-300 p-4 shadow absolute bottom-0 left-0 right-0 flex-row justify-around">
+        <View className="bg-[#C43670] p-4 shadow absolute bottom-0 left-0 right-0 flex-row justify-around">
           <Pressable onPress={() => router.push("/dashboard/home")}>
-            <Text className="text-gray-500">Home</Text>
+            <Text className="text-white">Home</Text>
           </Pressable>
           <Pressable onPress={() => router.push("/dashboard/consultation")}>
-            <Text className="text-[#C43670] font-semibold">Consult</Text>
+            <Text className="text-[#F283AF] font-semibold">Consult</Text>
           </Pressable>
           <Pressable>
-            <Text className="text-gray-500">Scan</Text>
+            <Text className="text-white">Scan</Text>
           </Pressable>
           <Pressable>
-            <Text className="text-gray-500">History</Text>
+            <Text className="text-white">History</Text>
           </Pressable>
           <Pressable>
-            <Text className="text-gray-500">Profile</Text>
+            <Text className="text-white">Profile</Text>
           </Pressable>
         </View>
     </SafeAreaView>

@@ -131,21 +131,21 @@ export default function DashboardPage() {
       </ScrollView>
 
       {/* Fixed bottom navigation */}
-      <View className="bg-pink-300 p-4 shadow absolute bottom-0 left-0 right-0 flex-row justify-around">
+      <View className="bg-[#F283AF] p-4 shadow absolute bottom-0 left-0 right-0 flex-row justify-around">
       <Pressable onPress={() => router.push("/dashboard/home")}>
-        <Text className="text-[#C43670] font-semibold">Home</Text>
+        <Text className="text-[#FBD9E5] font-semibold">Home</Text>
       </Pressable>
       <Pressable onPress={() => router.push("/dashboard/consultation")}>
-        <Text className="text-gray-500">Consult</Text>
+        <Text className="text-white">Consult</Text>
       </Pressable>
       <Pressable>
-        <Text className="text-gray-500">Scan</Text>
+        <Text className="text-white">Scan</Text>
       </Pressable>
       <Pressable>
-        <Text className="text-gray-500">History</Text>
+        <Text className="text-white">History</Text>
       </Pressable>
       <Pressable>
-        <Text className="text-gray-500">Profile</Text>
+        <Text className="text-white">Profile</Text>
       </Pressable>
       </View>
     </SafeAreaView>
