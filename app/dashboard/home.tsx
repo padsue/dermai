@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { View, Text, ScrollView, Modal, TouchableOpacity, Alert } from 'react-native';
-import Header from 'components/header';
+import { View, Text, ScrollView, Modal, TouchableOpacity, Alert, Pressable } from 'react-native';
 import HeroBanner from 'components/hero-banner';
 import MembershipCard from 'components/membership-card';
 import SummaryChart from 'components/summary-chart';
@@ -132,7 +131,23 @@ export default function DashboardPage() {
       </ScrollView>
 
       {/* Fixed bottom navigation */}
-      <BottomNavigation />
+      <View className="bg-pink-300 p-4 shadow absolute bottom-0 left-0 right-0 flex-row justify-around">
+      <Pressable onPress={() => router.push("/dashboard/home")}>
+        <Text className="text-[#C43670] font-semibold">Home</Text>
+      </Pressable>
+      <Pressable onPress={() => router.push("/dashboard/consultation")}>
+        <Text className="text-gray-500">Consult</Text>
+      </Pressable>
+      <Pressable>
+        <Text className="text-gray-500">Scan</Text>
+      </Pressable>
+      <Pressable>
+        <Text className="text-gray-500">History</Text>
+      </Pressable>
+      <Pressable>
+        <Text className="text-gray-500">Profile</Text>
+      </Pressable>
+      </View>
     </SafeAreaView>
   );
 }
